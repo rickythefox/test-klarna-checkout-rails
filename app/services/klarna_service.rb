@@ -61,10 +61,10 @@ class KlarnaService
             }
         ],
         merchant_urls: {
-            terms: 'https://www.estore.com/terms.html',
-            checkout: 'https://local.dev:3000?sid={checkout.order.id}',
-            confirmation: 'https://local.dev:3000/confirm?sid={checkout.order.id}',
-            push: 'https://www.estore.com/api/push?checkout_uri={checkout.order.id}',
+            terms: "#{ENV['ENV_URL']}/terms.html",
+            checkout: "#{ENV['ENV_URL']}?sid={checkout.order.id}",
+            confirmation: "#{ENV['ENV_URL']}/confirm?sid={checkout.order.id}",
+            push: "#{ENV['ENV_URL']}/push?checkout_uri={checkout.order.id}",
             #address_update: 'https://local.dev/address_update'
         },
         options: {
